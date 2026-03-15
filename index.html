@@ -278,6 +278,30 @@
                         </ol>
                     </div>
                 </div>
+
+                <!-- Antigravity (Google) -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🚀</div>
+                    </div>
+                    <h3>Antigravity (Google)</h3>
+                    <p class="tool-desc">Google'ın agent-first IDE'si. VS Code tabanlı, Gemini 3 modelleriyle çalışır. Manager View ile birden fazla AI ajanını aynı anda yönetebilirsiniz.</p>
+                    <ul class="tool-features">
+                        <li>✅ Agent-first tasarım (Manager View)</li>
+                        <li>✅ Gemini 3 + Claude + GPT desteği</li>
+                        <li>✅ Tarayıcı, terminal ve editör entegrasyonu</li>
+                        <li>✅ Önizleme süresince tamamen ücretsiz</li>
+                    </ul>
+                    <div class="tool-how">
+                        <strong>Nasıl Başlanır:</strong>
+                        <ol>
+                            <li><a href="https://antigravity.google" target="_blank">antigravity.google</a> adresinden indirin</li>
+                            <li>Google hesabınızla giriş yapın</li>
+                            <li>Yeni proje oluşturun</li>
+                            <li>Agent panelinden projenizi tarif edin!</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
 
             <!-- Browser-Based AI Tools -->
@@ -414,7 +438,7 @@
                     <li><strong><a href="https://education.github.com/pack" target="_blank">GitHub Student Developer Pack</a></strong> — GitHub Copilot dahil onlarca araç ücretsiz (.edu e-postası gerekli)</li>
                     <li><strong><a href="https://www.jetbrains.com/community/education/" target="_blank">JetBrains Eğitim Lisansı</a></strong> — Tüm JetBrains IDE'leri öğrencilere ücretsiz (Junie AI ayrı abonelik)</li>
                     <li><strong><a href="https://zed.dev/blog/student-plan" target="_blank">Zed Öğrenci Planı</a></strong> — Pro özellikleri 1 yıl ücretsiz</li>
-                    <li><strong>Cursor, Windsurf, Trae</strong> ve diğer araçların çoğu zaten ücretsiz planları var — başlamak için yeterli</li>
+                    <li><strong>Cursor, Windsurf, Trae, Antigravity</strong> ve diğer araçların çoğu zaten ücretsiz planları var — başlamak için yeterli</li>
                 </ul>
             </div>
         </div>
@@ -922,14 +946,46 @@ Her proje bir kart içinde gösterilsin, kartlarda proje ismi ve açıklaması o
                         <p class="devtool-tip">💡 Beğendiğiniz değişiklikleri not alıp CSS dosyanıza uygulayın.</p>
                     </div>
                     <div class="devtool-tab">
-                        <h4>📱 Device Toolbar</h4>
-                        <p>Sitenizi farklı ekran boyutlarında test edin. Telefon ve tablet görünümlerini simüle eder.</p>
-                        <p class="devtool-tip">💡 Mobil görünüm kısayolları için yukarıdaki tarayıcı listesine bakın.</p>
-                    </div>
-                    <div class="devtool-tab">
                         <h4>⚠️ Console</h4>
                         <p>JavaScript hatalarını gösterir. Kırmızı mesajlar varsa, AI aracınıza bu hataları kopyalayıp yapıştırın.</p>
                         <p class="devtool-tip">💡 "Console'da şu hata var: [hata mesajı]" şeklinde AI'ya sorun.</p>
+                    </div>
+                </div>
+
+                <!-- Device Toolbar Detailed Guide -->
+                <div class="device-toolbar-guide" style="margin-top: 32px;">
+                    <h4>📱 Device Toolbar — Mobil Görünümü Test Etme</h4>
+                    <p style="margin-bottom: 16px;">Sitenizi yayınlamadan önce farklı cihazlarda nasıl göründüğünü <strong>masaüstü tarayıcınızdan</strong> test edebilirsiniz. Bu özellik tüm tarayıcılarda yerleşik olarak gelir.</p>
+
+                    <div class="device-toolbar-steps">
+                        <div class="dt-step">
+                            <div class="dt-step-number">1</div>
+                            <div class="dt-step-content">
+                                <strong>DevTools'u açın</strong> (F12 veya yukarıdaki kısayollar) ve ardından <strong>Device Toolbar</strong> ikonuna tıklayın — telefon+tablet şeklinde küçük bir ikondur. Veya doğrudan kısayol kullanın (Chrome/Edge: <kbd>Ctrl+Shift+M</kbd>).
+                            </div>
+                        </div>
+                        <div class="dt-step">
+                            <div class="dt-step-number">2</div>
+                            <div class="dt-step-content">
+                                <strong>Cihaz seçin:</strong> Üstteki açılır menüden iPhone SE, iPhone 14 Pro, iPad, Samsung Galaxy gibi popüler cihazları seçebilirsiniz. Ya da "Responsive" modunda boyutları sürükleyerek ayarlayın.
+                            </div>
+                        </div>
+                        <div class="dt-step">
+                            <div class="dt-step-number">3</div>
+                            <div class="dt-step-content">
+                                <strong>Kontrol edin:</strong> Yazılar taşıyor mu? Butonlara rahatça tıklanabiliyor mu? Yatay kaydırma çubuğu oluşuyor mu? Sağda gereksiz boşluk var mı?
+                            </div>
+                        </div>
+                        <div class="dt-step">
+                            <div class="dt-step-number">4</div>
+                            <div class="dt-step-content">
+                                <strong>Sorun bulursanız → AI'ya sorun:</strong> "Sitem mobilde sağa taşıyor, düzelt" veya "iPhone SE'de menü düzgün görünmüyor" gibi promptlar yazın.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box" style="margin-top: 16px;">
+                        💡 <strong>İpucu:</strong> Gerçek telefonunuzda da test etmek isterseniz, bilgisayar ve telefon aynı Wi-Fi'dayken <code>python -m http.server</code> çalıştırıp telefondan bilgisayarınızın IP adresine (örn: <code>192.168.1.x:8000</code>) bağlanabilirsiniz.
                     </div>
                 </div>
             </div>
@@ -1461,9 +1517,14 @@ Font: Google Fonts'tan "Great Vibes" veya "Dancing Script" başlıklar için.</p
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>GitHub Hesabı Oluşturun</h4>
-                                <p><a href="https://github.com" target="_blank">github.com</a> adresine gidin ve ücretsiz bir hesap açın. Kullanıcı adınız sitenizin URL'sinde yer alacak.</p>
-                                <div class="url-display">
-                                    <code>https://<strong>kullaniciadi</strong>.github.io</code>
+                                <p><a href="https://github.com" target="_blank">github.com</a> adresine gidin ve ücretsiz bir hesap açın.</p>
+                                <div class="info-box" style="margin-top: 12px;">
+                                    💡 <strong>Kullanıcı adınızı nasıl bulursunuz?</strong>
+                                    <ul style="margin:8px 0 0 0; line-height:2;">
+                                        <li>Sağ üst köşedeki <strong>profil fotoğrafınıza</strong> tıklayın — açılan menüde kullanıcı adınız yazar</li>
+                                        <li>Profil sayfanıza gidin — URL'nin son kısmı kullanıcı adınızdır (github.com/<strong>kullaniciadi</strong>)</li>
+                                        <li>Yeni repo oluştururken <strong>Owner</strong> alanında kullanıcı adınızı görebilirsiniz</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1483,7 +1544,10 @@ Font: Google Fonts'tan "Great Vibes" veya "Dancing Script" başlıklar için.</p
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>Dosyalarınızı Yükleyin</h4>
-                                <p>Repository sayfasında "uploading an existing file" linkine tıklayın. Tüm proje dosyalarınızı (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>, resimler) sürükleyip bırakın.</p>
+                                <p>Boş bir repo oluşturduğunuzda sayfada göreceğiniz <strong>"uploading an existing file"</strong> linkine tıklayın. Tüm proje dosyalarınızı (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>, resimler) sürükleyip bırakın.</p>
+                                <div class="info-box" style="margin-top: 12px;">
+                                    ℹ️ <strong>Daha sonra dosya yüklemek için:</strong> Reponuza tekrar girdiğinizde bu link artık görünmez. Bunun yerine sayfadaki <strong>"Add file"</strong> butonuna tıklayıp açılan menüden <strong>"Upload files"</strong> seçeneğini kullanın.
+                                </div>
                                 <div class="guide-screenshot">
                                     <p style="text-align: center; color: var(--gray-500); font-size: 0.9rem;">📸 Dosyalarınızı sürükleyip GitHub'a yükleyin. "Commit changes" butonuna tıklamayı unutmayın.</p>
                                 </div>
@@ -1493,22 +1557,20 @@ Font: Google Fonts'tan "Great Vibes" veya "Dancing Script" başlıklar için.</p
                         <div class="step">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <h4>GitHub Pages'ı Etkinleştirin</h4>
-                                <p>Repository ayarlarına gidin: <strong>Settings → Pages</strong>. "Branch" kısmında <strong>main</strong> seçip "Save" tıklayın.</p>
-                                <div class="guide-screenshot">
-                                    <p style="text-align: center; color: var(--gray-500); font-size: 0.9rem;">📸 Settings → Pages menüsünden "main" branch'ı seçip kaydedin. Detaylar için: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" target="_blank">GitHub Pages Dokümanı</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
                                 <h4>Siteniz Yayında! 🎉</h4>
-                                <p>Birkaç dakika bekleyin, ardından siteniz şu adreste yayında olacak:</p>
+                                <p><code>kullaniciadi.github.io</code> formatındaki repolar için GitHub Pages <strong>otomatik olarak etkindir</strong> — ekstra ayar gerekmez. Birkaç dakika bekleyin, ardından siteniz şu adreste yayında olacak:</p>
                                 <div class="url-display">
                                     <code>https://kullaniciadi.github.io</code>
                                 </div>
+
+                                <div class="info-box" style="margin-top: 12px;">
+                                    ⚠️ <strong>index.html dosyası şart!</strong> GitHub Pages reponun kök dizininde (root) bir <code>index.html</code> arar. Bu dosya yoksa siteniz açılmaz.
+                                    <ul style="margin:8px 0 0 0; line-height:2;">
+                                        <li>Dosyalarınız bir klasörün içindeyse (ör. <code>site/index.html</code>), <strong>Settings → Pages</strong> bölümünden klasör yolunu ayarlamanız gerekir</li>
+                                        <li>En kolay yol: <code>index.html</code>, <code>style.css</code> ve <code>script.js</code> dosyalarını doğrudan reponun kök dizinine yüklemektir</li>
+                                    </ul>
+                                </div>
+
                                 <div class="update-guide">
                                     <h4>🔄 Güncelleme Yapmak İçin</h4>
                                     <p>Repository'nize gidip dosyaları düzenleyin veya yeni dosyalar yükleyin. Değişiklikler birkaç dakika içinde otomatik yansır.</p>
@@ -2172,51 +2234,32 @@ Font: Google Fonts'tan "Great Vibes" veya "Dancing Script" başlıklar için.</p
     <!-- ================================================================ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <!-- Column 1: Main -->
-                <div class="footer-main">
-                    <span class="footer-logo">🤖🌐 AI Web Rehberi</span>
-                    <p>Kodlama bilmeden, AI araçları ile kişisel web sitenizi oluşturmayı öğrenin. Türkçe, ücretsiz ve kapsamlı rehber.</p>
-                </div>
-
-                <!-- Column 2: Quick Links -->
-                <div class="footer-links">
-                    <h4>Hızlı Bağlantılar</h4>
-                    <a href="#ai-tools">AI Araçları</a>
-                    <a href="#prompt-guide">Prompt Rehberi</a>
-                    <a href="#fundamentals">Temel Kavramlar</a>
-                    <a href="#local-dev">Yerel Geliştirme</a>
-                    <a href="#projects">Proje Örnekleri</a>
-                    <a href="#frontend-backend">Frontend & Backend</a>
-                </div>
-
-                <!-- Column 3: AI Tools -->
-                <div class="footer-links">
-                    <h4>AI Araçları</h4>
-                    <a href="https://cursor.sh" target="_blank">Cursor</a>
-                    <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
-                    <a href="https://trae.ai" target="_blank">Trae</a>
-                    <a href="https://windsurf.com" target="_blank">Windsurf</a>
-                    <a href="https://zed.dev" target="_blank">Zed</a>
-                    <a href="https://bolt.new" target="_blank">Bolt.new</a>
-                    <a href="https://firebase.studio" target="_blank">Firebase Studio</a>
-                    <a href="https://lovable.dev" target="_blank">Lovable</a>
-                    <a href="https://replit.com" target="_blank">Replit</a>
-                </div>
-
-                <!-- Column 4: Hosting -->
-                <div class="footer-links">
-                    <h4>Hosting Platformları</h4>
-                    <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
-                    <a href="https://vercel.com" target="_blank">Vercel</a>
-                    <a href="https://netlify.com" target="_blank">Netlify</a>
-                    <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a>
-                    <a href="https://firebase.google.com/products/hosting" target="_blank">Firebase Hosting</a>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p>AI ile web geliştirme rehberi — 2025. Eğitim amaçlı hazırlanmıştır.</p>
+                <div class="footer-credits">
+                    <div class="footer-credit-item">
+                        <span class="footer-credit-icon">✍️</span>
+                        <span>Bu rehber <strong>Güvenç Usanmaz</strong> tarafından hazırlanmıştır.</span>
+                    </div>
+                    <div class="footer-credit-item">
+                        <span class="footer-credit-icon">🤖</span>
+                        <span>İçeriğin oluşturulmasında ve düzenlenmesinde yapay zeka araçlarından (LLM) yararlanılmıştır.</span>
+                    </div>
+                </div>
+
+                <div class="footer-opensource">
+                    <div class="footer-opensource-header">
+                        <span>🐙</span>
+                        <strong>Açık Kaynak</strong>
+                    </div>
+                    <a href="https://github.com/anadolubiltekmyo/YapayZekaAkademisi" target="_blank" class="footer-repo-link">github.com/anadolubiltekmyo/YapayZekaAkademisi</a>
+                    <div class="footer-contribute">
+                        <span>📌 Issue açın — hata, öneri veya soru bildirin</span>
+                        <span>🔀 Pull Request gönderin — düzeltme veya ekleme önerin</span>
+                        <span>🍴 Fork'layın — kendi kopyanızı oluşturup özgürce düzenleyin</span>
+                    </div>
+                </div>
+
+                <p class="footer-year">Eğitim amaçlı hazırlanmıştır — 2026</p>
             </div>
         </div>
     </footer>
